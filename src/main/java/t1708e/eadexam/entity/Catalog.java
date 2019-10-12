@@ -14,7 +14,7 @@ public class Catalog {
     private String contactPerson;
     private String phone;
 
-    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "catalog", cascade = CascadeType.ALL)
     private Set<Book> books;
 
     public int getId() {

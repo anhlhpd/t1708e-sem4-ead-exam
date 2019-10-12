@@ -5,5 +5,5 @@ import t1708e.eadexam.entity.Book;
 
 public interface BookRepository extends JpaRepository<Book, Integer> {
 
-    Book getByName(String name);
+    Book getByNameOrAuthorOrGenre(String keyword, String au, String genre);
 }

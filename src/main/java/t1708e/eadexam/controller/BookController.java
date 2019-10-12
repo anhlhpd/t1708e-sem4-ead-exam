@@ -48,7 +48,8 @@ public class BookController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/search")
-    public Book search(@RequestBody String keyword){
-        return bookService.getByName(keyword);
+    public String search(@PathVariable String keyword, Model model){
+        model.addAttribute("book", bookService.search(keyword));
+        return "book/search";
     }
 }
